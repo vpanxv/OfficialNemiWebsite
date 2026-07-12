@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nemi — Lightweight, powerful script executor.</title>
+    <meta name="description" content="Nemi — The most advanced execution environment ever engineered. Unmatched speed, flawless execution, and a stunning interface built for power users." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23071019'/%3E%3Cpath d='M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z' fill='%2300d4ff'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Loading -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-bolt" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg>
+            </div>
+            <div class="loader-text">NEMI</div>
+        </div>
+    </div>
+
+    <!-- Ambient background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <!-- Nav -->
+    <nav id="topnav">
+        <div class="nav-inner">
+            <a href="#top" class="logo">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg>
+                </span>
+                <span class="logo-text">NEMI</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#top" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+                <a href="#getkey" class="nav-link">Get Key</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#download" class="btn btn-primary nav-cta">Download Now</a>
+            </div>
+            <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <span class="pill reveal" data-reveal>
+                    <span class="pill-dot"></span> v1.0.0 — now available
+                </span>
+                <div class="hero-emblem reveal" data-reveal>
+                    <span class="emblem-ring"></span>
+                    <span class="emblem-ring emblem-ring-2"></span>
+                    <span class="emblem-core">
+                        <svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg>
+                    </span>
+                </div>
+                <h1 class="hero-title reveal" data-reveal>Absolute <span class="grad">Dominance.</span></h1>
+                <p class="hero-sub reveal" data-reveal>
+                    The most advanced execution environment ever engineered. Experience unprecedented
+                    speeds, flawless execution, and a stunning interface designed for power users.
+                </p>
+                <div class="hero-actions reveal" data-reveal>
+                    <a href="#download" class="btn btn-primary btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download v1.0.0
+                    </a>
+                    <a href="#getkey" class="btn btn-ghost btn-lg">
+                        Get Key
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="container stats-grid">
+                <div class="stat reveal" data-reveal>
+                    <span class="stat-num" data-count="100" data-suffix="%">0%</span>
+                    <span class="stat-label">sUNC Rate</span>
+                </div>
+                <div class="stat reveal" data-reveal>
+                    <span class="stat-num" data-count="99" data-suffix="%">0%</span>
+                    <span class="stat-label">UNC Compatibility</span>
+                </div>
+                <div class="stat reveal" data-reveal>
+                    <span class="stat-num" data-prefix="Level " data-count="8">Level 0</span>
+                    <span class="stat-label">Execution Power</span>
+                </div>
+                <div class="stat reveal" data-reveal>
+                    <span class="stat-num" data-count="0" data-suffix="ms">0ms</span>
+                    <span class="stat-label">Injection Delay</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section features" id="about">
+            <div class="container">
+                <div class="section-head reveal" data-reveal>
+                    <span class="feature-kicker"><span class="kicker-icon">◈</span> Features</span>
+                    <h2>Precision <span class="grad">Engineering</span></h2>
+                    <p>Designed for clarity, built for speed. The Nemi interface puts raw execution power at your fingertips.</p>
+                </div>
+
+                <!-- Feature 1: Editor -->
+                <div class="feature-row">
+                    <div class="feature-copy reveal" data-reveal>
+                        <span class="feature-kicker"><span class="kicker-icon">&lt;/&gt;</span> Editor</span>
+                        <h3>Advanced Editor</h3>
+                        <p>Write and execute scripts in a fully-featured editor. Complete with syntax highlighting, global Lua autocomplete, and tab management. The dark aesthetic reduces eye strain during long sessions.</p>
+                        <ul class="feature-list">
+                            <li><span class="tick">&lt;/&gt;</span> Multi-tab script management</li>
+                            <li><span class="tick">&lt;/&gt;</span> Real-time syntax validation</li>
+                            <li><span class="tick">&lt;/&gt;</span> Global Lua autocomplete</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual reveal" data-reveal>
+                        <!-- Editor Mockup -->
+                        <div class="mock">
+                            <div class="mock-titlebar">
+                                <div class="mock-brand">
+                                    <span class="mock-logo"><svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg></span>
+                                    NEMI <span class="mock-ver">v1.0.0</span>
+                                </div>
+                                <div class="mock-navtabs">
+                                    <span>Home</span><span class="on">Editor</span><span>Scripts</span><span>Settings</span>
+                                </div>
+                                <div class="mock-dots"><i></i><i></i><i></i></div>
+                            </div>
+                            <div class="mock-tabs">
+                                <span class="mtab on"><i class="mtab-dot"></i>main.lua</span>
+                                <span class="mtab">aimbot.lua</span>
+                                <span class="mtab-add">+</span>
+                            </div>
+                            <div class="mock-toolbar">
+                                <span class="mbtn mbtn-exec">▶ Execute</span>
+                                <span class="mbtn">Clear</span>
+                                <span class="mbtn">Open</span>
+                                <span class="mbtn">Save</span>
+                            </div>
+                            <div class="mock-editor">
+                                <div class="code-lines">
+                                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                                </div>
+                                <pre class="code-body"><span class="c-com">-- Nemi execution engine</span>
+<span class="c-key">local</span> nemi = <span class="c-fn">loadstring</span>(<span class="c-str">"core"</span>)()
+<span class="c-key">local</span> plr = game.<span class="c-fn">GetService</span>(<span class="c-str">"Players"</span>)
+
+nemi:<span class="c-fn">inject</span>({
+    speed = <span class="c-num">100</span>,
+    silent = <span class="c-key">true</span>,
+})
+<span class="c-fn">print</span>(<span class="c-str">"hello from nemi"</span>)</pre>
+                            </div>
+                            <div class="mock-status">
+                                <span>Lua</span><span class="ok">● Connected</span><span class="ml">Ln 7, Col 32</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Script Hub -->
+                <div class="feature-row reverse">
+                    <div class="feature-copy reveal" data-reveal>
+                        <span class="feature-kicker"><span class="kicker-icon">◈</span> Library</span>
+                        <h3>Integrated Script Hub</h3>
+                        <p>Access thousands of premium scripts directly from the client. No more hunting through forums or risking malicious downloads. Execute with a single click.</p>
+                        <ul class="feature-list">
+                            <li><span class="tick">✓</span> Curated, safe script collection</li>
+                            <li><span class="tick">✓</span> One-click execution</li>
+                            <li><span class="tick">✓</span> Custom UI integration for popular hubs</li>
+                        </ul>
+                    </div>
+                    <div class="feature-visual reveal" data-reveal>
+                        <!-- Script Hub Mockup -->
+                        <div class="mock">
+                            <div class="mock-titlebar">
+                                <div class="mock-brand">
+                                    <span class="mock-logo"><svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg></span>
+                                    NEMI <span class="mock-ver">v1.0.0</span>
+                                </div>
+                                <div class="mock-navtabs">
+                                    <span>Home</span><span>Editor</span><span class="on">Scripts</span><span>Settings</span>
+                                </div>
+                                <div class="mock-dots"><i></i><i></i><i></i></div>
+                            </div>
+                            <div class="mock-hub">
+                                <div class="hub-side">
+                                    <div class="hub-search">Search scripts…</div>
+                                    <div class="hub-nav"><span class="on">◱ Browse</span><span>♡ Saved</span><span>⬡ Game</span><span>↺ Recent</span></div>
+                                </div>
+                                <div class="hub-grid">
+                                    <div class="hub-card">
+                                        <div class="hub-thumb t1"><span class="hub-play">▶</span></div>
+                                        <div class="hub-meta"><b>Universal VC Bypass</b><small>ReanimHub</small></div>
+                                    </div>
+                                    <div class="hub-card">
+                                        <div class="hub-thumb t2"><span class="hub-play">▶</span></div>
+                                        <div class="hub-meta"><b>Silent Aim + Tracers</b><small>Keyless</small></div>
+                                    </div>
+                                    <div class="hub-card">
+                                        <div class="hub-thumb t3"><span class="hub-play">▶</span></div>
+                                        <div class="hub-meta"><b>Exotic Crate INF Jump</b><small>NemiLabs</small></div>
+                                    </div>
+                                    <div class="hub-card">
+                                        <div class="hub-thumb t4"><span class="hub-play">▶</span></div>
+                                        <div class="hub-meta"><b>Ninja Movement</b><small>Community</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download -->
+        <section class="section download alt" id="download">
+            <div class="container">
+                <div class="section-head reveal" data-reveal>
+                    <span class="feature-kicker"><span class="kicker-icon">⬇</span> Download</span>
+                    <h2>Get <span class="grad">Nemi</span></h2>
+                    <p>One click to the fastest executor on the market. No bloat, no waiting.</p>
+                </div>
+                <div class="dl-wrap">
+                    <div class="dl-main reveal" data-reveal>
+                        <span class="dl-badge">Latest • Stable</span>
+                        <div class="dl-top">
+                            <span class="dl-icon"><svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg></span>
+                            <div>
+                                <h3>Nemi for Windows</h3>
+                                <span class="dl-ver">Version 1.0.0 · 4.2 MB</span>
+                            </div>
+                        </div>
+                        <a href="#download" class="btn btn-primary btn-lg dl-btn" data-toast="Preparing Nemi v1.0.0…">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Download v1.0.0
+                        </a>
+                        <div class="dl-note">SHA-256 verified · Auto-updates · Instant setup</div>
+                    </div>
+                    <div class="dl-side reveal" data-reveal>
+                        <h4>Requirements</h4>
+                        <ul class="feature-list">
+                            <li><span class="tick">✓</span> Windows 10 / 11 (64-bit)</li>
+                            <li><span class="tick">✓</span> 4 GB RAM minimum</li>
+                            <li><span class="tick">✓</span> .NET Framework 4.8</li>
+                            <li><span class="tick">✓</span> AV disabled during install</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get Key -->
+        <section class="section getkey" id="getkey">
+            <div class="container">
+                <div class="section-head reveal" data-reveal>
+                    <span class="feature-kicker"><span class="kicker-icon">⚿</span> Get Key</span>
+                    <h2>Unlock <span class="grad">Access</span></h2>
+                    <p>Complete three quick checkpoints to generate your free execution key.</p>
+                </div>
+                <div class="key-steps">
+                    <div class="key-step reveal" data-reveal>
+                        <span class="key-num">1</span>
+                        <b>Start checkpoint</b>
+                        <p>Click Get Key to open the first checkpoint.</p>
+                    </div>
+                    <div class="key-step reveal" data-reveal>
+                        <span class="key-num">2</span>
+                        <b>Complete steps</b>
+                        <p>Follow the links and return to continue.</p>
+                    </div>
+                    <div class="key-step reveal" data-reveal>
+                        <span class="key-num">3</span>
+                        <b>Copy your key</b>
+                        <p>Your 24h key is generated instantly.</p>
+                    </div>
+                </div>
+                <div class="key-box reveal" data-reveal>
+                    <div class="key-field" id="keyField">Your key will appear here…</div>
+                    <button class="btn btn-primary btn-lg" id="getKeyBtn">Get Key</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section faq alt" id="faq">
+            <div class="container">
+                <div class="section-head reveal" data-reveal>
+                    <span class="feature-kicker"><span class="kicker-icon">?</span> FAQ</span>
+                    <h2>Frequently <span class="grad">Asked</span></h2>
+                    <p>Everything you need to know before you start.</p>
+                </div>
+                <div class="faq-list reveal" data-reveal>
+                    <details class="faq-item">
+                        <summary>Is Nemi safe to use? <span class="faq-plus">+</span></summary>
+                        <div class="faq-a">Yes. Every build is SHA-256 verified and scanned before release. We never bundle miners, spyware, or trackers.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Is Nemi free? <span class="faq-plus">+</span></summary>
+                        <div class="faq-a">The core executor is completely free. You only need to complete the quick key checkpoints to unlock access.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How long does a key last? <span class="faq-plus">+</span></summary>
+                        <div class="faq-a">Each generated key is valid for 24 hours. Simply re-run the checkpoints to get a fresh one.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Which games are supported? <span class="faq-plus">+</span></summary>
+                        <div class="faq-a">Nemi ships with 99% UNC compatibility and a 100% sUNC rate, covering the vast majority of experiences.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How often is Nemi updated? <span class="faq-plus">+</span></summary>
+                        <div class="faq-a">Updates roll out automatically, usually within hours of a new platform patch — no manual re-download required.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="discord">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="logo">
+                    <span class="logo-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M13.6 3 L5.5 13.4 H10.8 L9.2 21 L18.5 9.8 H12.6 Z" /></svg>
+                    </span>
+                    <span class="logo-text">NEMI</span>
+                </a>
+                <p>The premier high-performance executor. Engineered for power, designed for speed. Redefining what's possible in execution technology.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="#top">Home</a>
+                <a href="#download">Download</a>
+                <a href="#getkey">Get Key</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Community</h4>
+                <a href="#discord">Discord Server</a>
+                <a href="#">Documentation</a>
+                <a href="#">Support</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            © 2026 Nemi. All rights reserved. Not affiliated with Roblox Corporation.
+        </div>
+    </footer>
+
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
